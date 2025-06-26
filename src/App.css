@@ -85,7 +85,16 @@ html, body {
   position:relative;
   background: #e9dfd1;
   height: 100vh; 
- 
+}
+
+.textoPedidosDU{
+  position:relative;
+  font-family: 'Montserrat';
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+  bottom: 100px;
 }
 
 .site-footer {

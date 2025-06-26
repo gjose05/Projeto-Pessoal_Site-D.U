@@ -50,6 +50,7 @@ function App() {
         <section id="pedidos" className="PedidosDU">
           <BotoesGenero />
           <Botao />
+          <p className="textoPedidosDU">Imagens ilustrativas *</p>
         </section>
       </div>
 

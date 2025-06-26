@@ -5,7 +5,7 @@ function TextoDU() {
     <div className="texto-DU">
       <div className="titulo-DU">
         <p>
-          O BÁSICO PODE SER PODEROSO
+          O BÁSICO PODE SER PODEROSO?
         </p>
       </div>
 
