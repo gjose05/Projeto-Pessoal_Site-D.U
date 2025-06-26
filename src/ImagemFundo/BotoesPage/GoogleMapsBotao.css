@@ -32,29 +32,28 @@
   }
 }
 
-/* Versão MOBILE (até 768px) */
 @media (max-width: 768px) {
   .maps-button {
-    position: fixed; /* Fixar no rodapé da tela */
-    bottom: 200px;
-    left: 50%;  /* Centraliza horizontalmente */
-    transform: translateX(-50%);
+    position: relative; /* Mude de fixed para relative */
+    bottom: 400px; /* Remove a posição fixa do rodapé */
+    left: auto; /* Remove o alinhamento horizontal */
+    transform: none; /* Remove a transformação */
     
     width: 90%;
     max-width: 300px;
     padding: 14px 20px;
     font-size: 1rem;
     min-height: 50px;
+    margin: 0 auto; /* Centraliza o botão no container */
+    display: block; /* Garante que o margin auto funcione */
   }
 }
 
 /* Versão MOBILE menor (até 480px) */
 @media (max-width: 480px) {
   .maps-button {
-    bottom: 300px;
     max-width: 100px;
     padding: 15px 12px;
     font-size: 1.4rem;
   }
 }
-

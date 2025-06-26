@@ -36,10 +36,10 @@
 /* Versão MOBILE (até 768px) */
 @media (max-width: 768px) {
   .instagram-button {
-    position: fixed;      /* fixa na viewport, tipo botão flutuante */
-    bottom: 500px;         /* distância do rodapé */
-    left: 50%;            /* centraliza horizontalmente */
-    transform: translateX(-50%);  /* puxa metade da largura para a esquerda */
+    position: relative;    /* Remove o posicionamento fixo */
+    bottom: 600px;          /* Remove a posição fixa do rodapé */
+    left: auto;            /* Remove o alinhamento horizontal forçado */
+    transform: none;       /* Remove a transformação de centralização */
     
     width: 90%;
     max-width: 300px;
@@ -48,15 +48,17 @@
     min-height: 50px;
     text-align: center;
     cursor: pointer;
+    margin: 20px auto;    /* Adiciona margem e centraliza no container */
+    display: block;       /* Garante que o margin auto funcione */
   }
 }
 
 /* Ajuste para telas muito pequenas */
 @media (max-width: 480px) {
   .instagram-button {
-    bottom: 500px;         /* um pouco mais acima no rodapé para caber */
-    max-width: 200px;     /* um pouco menor no width máximo */
+    max-width: 200px;     /* mantém o width máximo reduzido */
     padding: 12px 16px;
-    font-size: 1.4rem;    /* diminui um pouco o tamanho da fonte */
+    font-size: 1.4rem;
+    margin: 15px auto;    /* Ajusta a margem para telas pequenas */
   }
 }
