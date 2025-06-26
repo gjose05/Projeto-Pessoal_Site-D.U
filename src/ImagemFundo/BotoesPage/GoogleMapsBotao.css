@@ -35,30 +35,26 @@
 /* Versão MOBILE (até 768px) */
 @media (max-width: 768px) {
   .maps-button {
-    /* Posição fixa no rodapé */
-    position: relative;
+    position: fixed; /* Fixar no rodapé da tela */
     bottom: 200px;
-    right: 5%;
+    left: 50%;  /* Centraliza horizontalmente */
     transform: translateX(-50%);
     
-    /* Tamanho otimizado */
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     padding: 14px 20px;
     font-size: 1rem;
-    
-    /* Área de toque adequada */
     min-height: 50px;
   }
+}
 
-  @media (max-width: 480px) {
+/* Versão MOBILE menor (até 480px) */
+@media (max-width: 480px) {
   .maps-button {
     bottom: 300px;
     max-width: 100px;
     padding: 15px 12px;
-    font-size: 0.9rem;
-    right:35%;
+    font-size: 1.4rem;
   }
-}
 }
 

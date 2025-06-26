@@ -36,29 +36,27 @@
 /* Versão MOBILE (até 768px) */
 @media (max-width: 768px) {
   .instagram-button {
-    /* Posição fixa no rodapé */
-    position: relative;
-    bottom: 600px;
-    left: 30%;
-    transform: translateX(-50%);
+    position: fixed;      /* fixa na viewport, tipo botão flutuante */
+    bottom: 500px;         /* distância do rodapé */
+    left: 50%;            /* centraliza horizontalmente */
+    transform: translateX(-50%);  /* puxa metade da largura para a esquerda */
     
-    /* Tamanho otimizado */
     width: 90%;
     max-width: 300px;
     padding: 14px 20px;
     font-size: 1rem;
-    
-    /* Área de toque adequada */
     min-height: 50px;
+    text-align: center;
+    cursor: pointer;
   }
 }
 
 /* Ajuste para telas muito pequenas */
 @media (max-width: 480px) {
   .instagram-button {
-    bottom: 600px;
+    bottom: 500px;         /* um pouco mais acima no rodapé para caber */
+    max-width: 200px;     /* um pouco menor no width máximo */
     padding: 12px 16px;
-    font-size: 1.4rem;
-    left:20%;
+    font-size: 1.4rem;    /* diminui um pouco o tamanho da fonte */
   }
 }
