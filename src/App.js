@@ -2,7 +2,7 @@ import './App.css';
 import LogoDU from './MenuStatic/LogoDU/LogoDU';
 import Navbar from './MenuStatic/Navbar/Navbar';
 import Backgroud from './paginaInicial/Backgroud/Background';
-import Texto_DU from './AboutPage/TextoAbout/Texto';
+import TextoDU from './AboutPage/TextoAbout/Texto';
 import AboutPage from './AboutPage/AboutPage';
 import ImagemFundo from './ImagemFundo/ImagemFundo';
 import InstagramButton from './ImagemFundo/BotoesPage/InstagramBotao';
@@ -31,7 +31,7 @@ function App() {
         <section id="mostruario" className="MostruarioDU">
           <div className="block">
             <div className="content-wrapper"> 
-              <Texto_DU />
+              <TextoDU />
               <AboutPage />
             </div>
           </div>
@@ -41,15 +41,15 @@ function App() {
       <div className="blockpage">
         <section id="contato" className="imagem-DU">
           <ImagemFundo /> 
-          <InstagramButton/>
-          <MapsButton/>
+          <InstagramButton />
+          <MapsButton />
         </section>
       </div>
 
       <div className="blockpage">
         <section id="pedidos" className="PedidosDU">
-          <BotoesGenero/>
-          <Botao/>
+          <BotoesGenero />
+          <Botao />
         </section>
       </div>
 

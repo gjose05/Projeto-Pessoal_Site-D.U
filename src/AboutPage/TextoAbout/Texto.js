@@ -1,6 +1,6 @@
 import './Texto.css'
 
-function Texto_DU() {
+function TextoDU() {
   return (
     <div className="texto-DU">
       <div className="titulo-DU">
@@ -37,4 +37,4 @@ function Texto_DU() {
   );
 }
 
-export default Texto_DU
+export default TextoDU
