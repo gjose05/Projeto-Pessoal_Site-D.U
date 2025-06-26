@@ -1,0 +1,81 @@
+/* Container principal - mantendo seu estilo */
+.navbar-container {
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+/* Lista de links - estilo ORIGINAL preservado */
+.navbar-list {
+  display: flex; 
+  gap: 50px; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links - ESTILO ORIGINAL INTACTO */
+.navbar-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 1.4rem; /* Tamanho original */
+  padding: 5px 0;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Efeitos hover - IDÊNTICO ao original */
+.navbar-link:hover {
+  font-size: 1.6rem;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.navbar-link:active {
+  transform: scale(0.98);
+}
+
+/* --- Apenas os ajustes necessários para mobile --- */
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding-right: 30px;
+  }
+  
+  .navbar-list {
+    gap: 30px; /* Reduz gap mas mantém proporção */
+  }
+  
+  .navbar-link {
+    font-size: 1.2rem; /* Redução sutil */
+  }
+  
+  .navbar-link:hover {
+    font-size: 1.4rem; /* Efeito proporcional */
+  }
+}
+
+/* Versão mobile (sem alterar estilo visual) */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding-right: 20px;
+  }
+  
+  .navbar-list {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    justify-content: flex-end;
+    gap: 15px 25px; /* Espaçamento controlado */
+  }
+  
+  .navbar-link {
+    font-size: 0.9rem; /* Quase igual ao original */
+    padding: 5px 0; /* Mantém padding original */
+    /* Garante que todos itens sejam visíveis */
+    flex-shrink: 0; /* Não deixa encolher demais */
+  }
+}

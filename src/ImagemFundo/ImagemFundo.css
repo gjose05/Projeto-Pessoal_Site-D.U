@@ -1,0 +1,82 @@
+.imagemfundo-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagemfundo-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+/* Mobile First Approach */
+@media (max-width: 768px) {
+  .imagemfundo-container {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+    min-height: -moz-available;
+    min-height: fill-available;
+    min-height: stretch;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) 
+             env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  .imagemfundo-image {
+    /* Prioriza performance sobre qualidade em dispositivos limitados */
+    image-rendering: optimizeSpeed;
+    
+    /* Evita redimensionamento desnecessário */
+    max-width: 100%;
+    max-height: 100%;
+    
+    /* Melhora carregamento progressivo */
+    background-size:contain;
+    background-position: center;
+  }
+
+  /* Dispositivos com altura muito pequena */
+  @media (max-height: 600px) and (orientation: landscape) {
+    .imagemfundo-container {
+      height: 150vh; /* Mais espaço para landscape */
+    }
+    .imagemfundo-image {
+      object-position: center 20%;
+    }
+  }
+}
+
+/* Otimizações para iOS */
+@supports (-webkit-touch-callout: none) {
+  .imagemfundo-container {
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
+  
+  /* Corrige comportamento de viewport em iOS */
+  @media (orientation: landscape) {
+    .imagemfundo-container {
+      height: 100vh;
+    }
+  }
+}
+
+/* Melhoria para telas muito largas (tablets em landscape) */
+@media (min-width: 769px) and (max-height: 500px) {
+  .imagemfundo-image {
+    object-position: center 30%;
+  }
+}

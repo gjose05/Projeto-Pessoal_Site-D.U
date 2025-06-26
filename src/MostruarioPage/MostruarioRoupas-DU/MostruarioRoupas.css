@@ -1,0 +1,38 @@
+.ctr-accordion {
+    display: flex;
+    height: 560px; 
+    gap: 5px;     
+    margin: 120px auto;
+    padding: 0 10px;
+    align-items: flex-end; 
+}
+
+.tab {
+    flex: 1;
+    height: 250px; 
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+.tab img {
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    transition: all 0.5s ease;
+}
+
+.tab:hover {
+    flex: 4;      
+    height: 370px; 
+    z-index: 10;   
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.ctr-accordion:hover .tab:not(:hover) {
+    flex: 0.7;     
+    height: 180px;
+}

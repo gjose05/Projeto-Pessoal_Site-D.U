@@ -1,0 +1,27 @@
+/* Layout principal - Masonry à DIREITA */
+.page-layout {
+  display: flex;
+  flex-direction: column-reverse; /* Mobile: texto abaixo do Masonry */
+  width: 100%;
+  position: relative;
+}
+
+.masonry-right {
+  width: 100%; /* Mobile: ocupa 100% */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Desktop (768px+) */
+@media (min-width: 768px) {
+  .page-layout {
+    flex-direction: row; /* Desktop: linha */
+    justify-content: flex-end; /* Alinha conteúdo à direita */
+  }
+  
+  .masonry-right {
+    width: 50%; /* Ocupa metade direita da tela */
+    position: sticky;
+    top: 20px;
+  }
+}

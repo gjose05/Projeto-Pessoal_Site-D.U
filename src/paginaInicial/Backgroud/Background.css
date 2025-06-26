@@ -1,0 +1,86 @@
+/* Container principal - agora 100% responsivo */
+.Background-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Alterado para min-height */
+  display: flex;
+  flex-direction: column; /* Mobile: empilhamento vertical */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5%;
+  box-sizing: border-box;
+  overflow: hidden; /* Previne vazamento de elementos */
+}
+
+/* Imagem de fundo (responsiva) */
+.fundo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Logo responsivo */
+.logotipobranco-image {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0; /* Espaçamento vertical */
+  object-fit: contain;
+}
+
+/* Texto responsivo */
+.text2-DU {
+  position: relative;
+  z-index: 10;
+  font-family: 'Montserrat';
+  font-weight: 800;
+  color: #000000;
+  text-align: center; /* Mobile: centralizado */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5%;
+  word-wrap: break-word;
+  margin: 20px 0;
+  font-size: 2rem; /* Unidade relativa */
+}
+
+/* Media Queries para diferentes tamanhos */
+@media (min-width: 600px) {
+  .text2-DU {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .Background-container {
+    flex-direction: row; /* Desktop: layout horizontal */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logotipobranco-image {
+    max-width: 35vw;
+    margin: 0;
+  }
+  
+  .text2-DU {
+    text-align: right;
+    max-width: 50%;
+    font-size: 3rem;
+    padding-right: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text2-DU {
+    font-size: 3.5rem;
+    max-width: 45%;
+  }
+}

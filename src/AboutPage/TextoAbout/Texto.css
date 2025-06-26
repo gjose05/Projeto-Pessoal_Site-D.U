@@ -1,0 +1,54 @@
+.texto-DU {
+  position: relative; /* Changed from absolute for mobile */
+  top: auto;
+  left: auto;
+  z-index: 10;
+  padding: 15px;
+  border-radius: 8px;
+  max-width: 100%; /* Full width on mobile */
+  margin-bottom: 20px;
+}
+
+.titulo-DU {
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 2rem; /* Responsive unit */
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 100%;
+}
+
+.corpo-Texto-1, 
+.corpo-Texto-2, 
+.corpo-Texto-3 {
+  font-family: 'Pathway Gothic One';
+  font-weight: 700;
+  font-size: 1rem; /* Responsive unit */
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: left;
+  max-width: 100%; /* Full width on mobile */
+  line-height: 1.5;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .texto-DU {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    max-width: 45%; /* Limits width on desktop */
+  }
+  
+  .titulo-DU {
+    font-size: 2.5rem;
+  }
+  
+  .corpo-Texto-1,
+  .corpo-Texto-2,
+  .corpo-Texto-3 {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+}
